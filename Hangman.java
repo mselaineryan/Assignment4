@@ -27,12 +27,21 @@ public class Hangman extends ConsoleProgram {
     	println ("Welcome to Hangman");
     	String secretWord = selectRandomWord ();
     	println ("The word now looks like this: " + printDashes(secretWord));
+    	println ("You have 8 guesses left.");
+    
+    	guessLetter ();
     	
     	
-    	// print out row of dashes, one for each letter
+    }
+    
+    private void guessLetter () {
+    	
+    	String guess = readLine ("Your guess: ");
+    	
     	// prompt user to guess letter
     	// fill in letter or display incorrect guess
     	// keep track of guess, more than 8 incorrect guess = lose, guess word before 8 incorrect = win
+    	
     	
     }
     

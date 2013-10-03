@@ -59,11 +59,13 @@ public class Hangman extends ConsoleProgram {
     			
     		} 
     		
-    		
+    		println ("The word now looks like this:" + result);	
     	}
-    	println ("There are no " + guess + "'s in the word.");
+    	//println ("There are no " + guess + "'s in the word.");
     	
-    	println ("The word now looks like this:" + result);
+    	
+    	
+    	
     	
     	
     	

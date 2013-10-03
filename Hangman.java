@@ -37,7 +37,7 @@ public class Hangman extends ConsoleProgram {
     private String guessLetter (String secretWord) {
     	
     	String guess = readLine ("Your guess: ");
-    	guess.toUpperCase();
+    	guess = guess.toUpperCase();
     	String result = "";
     	for (int i = 0; i < secretWord.length(); i++) {
     		

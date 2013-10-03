@@ -47,6 +47,7 @@ public class Hangman extends ConsoleProgram {
     			
     			
     		} else result += ch;
+    		println (result);
     	}
     	
     	// fill in letter or display incorrect guess

@@ -46,7 +46,7 @@ public class Hangman extends ConsoleProgram {
     			result += "- ";
     			
     			
-    		} else result += ch + "";
+    		} else result += ch + " ";
     		
     	}
     	

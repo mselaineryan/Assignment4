@@ -70,6 +70,8 @@ public class Hangman extends ConsoleProgram {
    private String selectRandomWord () {
 	   
 	   String secretWord = HangmanWords.getWord(rgen.nextInt (0, HangmanWords.getWordCount ()-1));
+	   //test
+	   println (secretWord);
 	   return secretWord;
 	   
 	   

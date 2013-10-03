@@ -29,7 +29,7 @@ public class Hangman extends ConsoleProgram {
     	println ("The word now looks like this: " + printDashes(secretWord));
     	println ("You have 8 guesses left.");
     
-    	guessLetter (secretWord);
+    	println (guessLetter (secretWord));
     	
     	
     }
@@ -51,7 +51,7 @@ public class Hangman extends ConsoleProgram {
     	}
     	
     	return result;
-    	println (result);
+    	
     	
     	// fill in letter or display incorrect guess
     	// keep track of guess, more than 8 incorrect guess = lose, guess word before 8 incorrect = win

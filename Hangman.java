@@ -24,7 +24,8 @@ public class Hangman extends ConsoleProgram {
     
     private void guessWord () {
     	
-    	selectRandomWord ();
+    	String secretWord = selectRandomWord ();
+    	printDashes(secretWord);
     	
     	
     	// print out row of dashes, one for each letter
@@ -34,9 +35,23 @@ public class Hangman extends ConsoleProgram {
     	
     }
     
+   private String printDashes (String secretWord) {
+	   
+	   String dashes = "";
+	   
+	   for (int i = 0; i < secretWord.length(); i++) {
+		   dashes += "- ";
+	   }
+	   //print dashes for testing purposes
+	   println (dashes);
+	   return dashes;
+   }
+   
+    
    private String selectRandomWord () {
 	   
 	   String secretWord = HangmanWords.getWord(rgen.nextInt (0, HangmanWords.getWordCount ()-1));
+	   //print word for testing purposes
 	   println (secretWord);
 	   return secretWord;
 	   

@@ -29,12 +29,13 @@ public class Hangman extends ConsoleProgram {
     	println ("The word now looks like this: " + printDashes(secretWord));
     	println ("You have 8 guesses left.");
     
-    	println (guessLetter (secretWord));
+    	guessLetter (secretWord);
+    	
     	
     	
     }
     
-    private String guessLetter (String secretWord) {
+    private void guessLetter (String secretWord) {
     	
     	String guess = readLine ("Your guess: ");
     	guess = guess.toUpperCase();
@@ -50,7 +51,17 @@ public class Hangman extends ConsoleProgram {
     		
     	}
     	
-    	return result;
+    	for (int i = 0; i < result.length(); i++) {
+    		char ch = result.charAt(i);
+    		if (Character.isLetter(ch)) {
+    			println ("That letter is correct.");
+    			break;
+    			
+    		} else println ("There are no" + guess + "'s in the word.");
+    	}
+    	
+    	println ("The word now looks like this:" + result);
+    	
     	
     	
     	// fill in letter or display incorrect guess

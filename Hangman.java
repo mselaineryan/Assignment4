@@ -57,7 +57,9 @@ public class Hangman extends ConsoleProgram {
     			println ("That letter is correct.");
     			break;
     			
-    		} //else println ("There are no " + guess + "'s in the word.");
+    		} 
+    		
+    		println ("There are no " + guess + "'s in the word.");
     	}
     	
     	println ("The word now looks like this:" + result);

@@ -58,6 +58,7 @@ public class Hangman extends ConsoleProgram {
     				println ("That letter is correct.");
     				break;
     			} 
+    			
     			blank += "- ";
     		}
     		

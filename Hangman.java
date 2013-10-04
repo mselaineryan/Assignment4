@@ -51,20 +51,22 @@ public class Hangman extends ConsoleProgram {
     		
     	}
     	
-    	for (int i = 0; i < result.length(); i++) {
-    		char ch = result.charAt(i);
-    		if (Character.isLetter(ch)) {
-    			println ("That letter is correct.");
-    			break;
-    		} 
+    	int j = 0;
+    	while (j < result.length ()) {
+    		for (int i = 0; i < result.length(); i++) {
+    			char ch = result.charAt(i);
+    			if (Character.isLetter(ch)) {
+    				println ("That letter is correct.");
+    				break;
+    			} 
+    		}
+    		char ch = result.charAt(j);
+    		if (Character.isLetter(ch)) break;
+    		println ("There are no " + guess + "'s in the word.");
     	
-    		
+    	
     	}
-    	
-    	if (result.charAt (result.length()-1) == '-') {
-			println ("There are no " + guess + "'s in the word.");
-    	}
-    	
+    
     	println ("The word now looks like this:" + result);	
     	
     	

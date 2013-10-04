@@ -60,7 +60,7 @@ public class Hangman extends ConsoleProgram {
     			
     		} 
     		
-    		else if (result.charAt (result.length()) == '-') {
+    		else if (result.charAt (result.length()-1) == '-') {
     			println ("There are no " + guess + "'s in the word.");
     		}
     		

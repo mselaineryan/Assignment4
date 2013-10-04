@@ -56,14 +56,13 @@ public class Hangman extends ConsoleProgram {
     		if (Character.isLetter(ch)) {
     			println ("That letter is correct.");
     			break;
-    		
-    			
     		} 
+    	
     		
-    		else if (result.charAt (result.length()-1) == '-') {
-    			println ("There are no " + guess + "'s in the word.");
-    		}
-    		
+    	}
+    	
+    	if (result.charAt (result.length()-1) == '-') {
+			println ("There are no " + guess + "'s in the word.");
     	}
     	
     	println ("The word now looks like this:" + result);	

@@ -51,7 +51,7 @@ public class Hangman extends ConsoleProgram {
     		
     	}
     	
-    	String blank = "";
+    	String blank = "-";
     		for (int i = 0; i < result.length(); i++) {
     			char ch = result.charAt(i);
     			if (Character.isLetter(ch)) {

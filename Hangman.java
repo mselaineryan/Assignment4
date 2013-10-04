@@ -51,7 +51,7 @@ public class Hangman extends ConsoleProgram {
     		
     	}
     	
-    	String blank = "-";
+    	String blank = "";
     		for (int i = 0; i < result.length(); i++) {
     			char ch = result.charAt(i);
     			if (Character.isLetter(ch)) {
@@ -61,7 +61,7 @@ public class Hangman extends ConsoleProgram {
     			blank += "-";
     		}
     		
-    		if (result.equals (blank)) {
+    		if (blank.equals (result)) {
     		println ("There are no " + guess + "'s in the word.");
     		}
     	

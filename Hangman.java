@@ -66,7 +66,7 @@ public class Hangman extends ConsoleProgram {
     			println ("There are no " + guess + "'s in the word.");
     			
     		}
-    		//( p. 266, int indexOf) if the letter isn't in the word do this
+    		
     	
     	
     

@@ -51,7 +51,7 @@ public class Hangman extends ConsoleProgram {
     		
     	}
     	
-    	String blank = "";
+    	
     		for (int i = 0; i < result.length(); i++) {
     			char ch = result.charAt(i);
     			if (Character.isLetter(ch)) {
@@ -59,12 +59,14 @@ public class Hangman extends ConsoleProgram {
     				break;
     			} 
     			
-    			blank += "- ";
+    		
     		}
     		
-    		//if (blank.equals (result)) {
-    		//println ("There are no " + guess + "'s in the word.");
-    		//}
+    		if (secretWord.indexOf (guess) == -1) {
+    			println ("There are no " + guess + "'s in the word.");
+    			
+    		}
+    		//( p. 266, int indexOf) if the letter isn't in the word do this
     	
     	
     

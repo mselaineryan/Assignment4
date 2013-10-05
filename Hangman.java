@@ -62,9 +62,9 @@ public class Hangman extends ConsoleProgram {
     			blank += "- ";
     		}
     		
-    		if (blank.equals (result)) {
-    		println ("There are no " + guess + "'s in the word.");
-    		}
+    		//if (blank.equals (result)) {
+    		//println ("There are no " + guess + "'s in the word.");
+    		//}
     	
     	
     

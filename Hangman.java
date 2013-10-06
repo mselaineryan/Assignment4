@@ -16,15 +16,20 @@ public class Hangman extends ConsoleProgram {
 
     public void run() {
 		/* You fill this in */
-    	guessWord ();
-    	//drawHangMan();
+    	
+    	println ("Welcome to Hangman");
+    	while (TURNS > 0) {
+    		guessWord ();
+    		//drawHangMan();
+    		
+    	}
     	//winOrLoseMessage();
     	
 	}
     
     private void guessWord () {
     	
-    	println ("Welcome to Hangman");
+    	
     	String secretWord = selectRandomWord ();
     	println ("The word now looks like this: " + printDashes(secretWord));
     	println ("You have " + TURNS + " guesses left.");
@@ -64,12 +69,13 @@ public class Hangman extends ConsoleProgram {
     		
     		if (secretWord.indexOf (guess) == -1) {
     			println ("There are no " + guess + "'s in the word.");
+    			 TURNS -= 1;
     			
     		}
     		
     	
     	
-    
+    	println ("You now have " + TURNS + " guesses left");	
     	println ("The word now looks like this:" + result);	
     	
     	
@@ -124,5 +130,5 @@ public class Hangman extends ConsoleProgram {
     
     private HangmanLexicon HangmanWords = new HangmanLexicon ();
     private RandomGenerator rgen = RandomGenerator.getInstance ();
-    private static final int TURNS = 8;
+    private static int TURNS = 8;
 }

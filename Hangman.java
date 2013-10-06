@@ -64,6 +64,7 @@ public class Hangman extends ConsoleProgram {
     		
     			}
     			println ("That letter is correct.");
+    			println ("The word now looks like this: " + result);
     		}
     	}
     	

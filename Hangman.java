@@ -33,7 +33,7 @@ public class Hangman extends ConsoleProgram {
     	println ("You have " + TURNS + " guesses left.");
     
     	
-    		guessLetter (secretWord);
+    	guessLetter (secretWord);
     	
     	
     	
@@ -44,45 +44,36 @@ public class Hangman extends ConsoleProgram {
     	while (TURNS > 0) {
     		String guess = readLine ("Your guess: ");
     		guess = guess.toUpperCase();
-    		String result = "";
-    		for (int i = 0; i < secretWord.length(); i++) {
+    		
+    		if (secretWord.indexOf (guess) == -1) {
+				println ("There are no " + guess + "'s in the word.");
+				TURNS -= 1;
+				println ("The word now looks like this: " + printDashes(secretWord));
+		    	println ("You have " + TURNS + " guesses left.");
+
+    		}
+    		
+    		if (secretWord.indexOf (guess) != -1) {
+    			String result = "";
+    			for (int i = 0; i < secretWord.length(); i++) {
     		
     			char ch = guess.charAt(0);
-    			if (ch != secretWord.charAt(i)) {
-    				result += "- ";
-    			
-    			
-    			} else result += ch + " ";
-    		
-    		}
-    	
-    	
-    			for (int i = 0; i < result.length(); i++) {
-    				char ch = result.charAt(i);
-    				if (Character.isLetter(ch)) {
-    					println ("That letter is correct.");
-    					break;
-    				} 
-    			
+    				if (ch != secretWord.charAt(i)) {
+    					result += "- ";
+    				} else result += ch + " ";
     		
     			}
-    		
-    			if (secretWord.indexOf (guess) == -1) {
-    				println ("There are no " + guess + "'s in the word.");
-    				TURNS -= 1;
-    			
-    			}
-    	
-    	
-    	
-    		
-    			println ("The word now looks like this:" + result);	
-    			println ("You have " + TURNS + " guesses left");
-    	
-    	
-    	
-    	
+    			println ("That letter is correct.");
     		}
+    	}
+    	
+    	
+    			
+    			
+    	
+    	
+    	
+    
     	
     	
     	

@@ -40,7 +40,8 @@ public class Hangman extends ConsoleProgram {
     	
     }
     
-    private void guessLetter (String secretWord) {
+    private String guessLetter (String secretWord) {
+    	String result = "";
     	while (TURNS > 0) {
     		String guess = readLine ("Your guess: ");
     		guess = guess.toUpperCase();
@@ -54,7 +55,7 @@ public class Hangman extends ConsoleProgram {
     		}
     		
     		if (secretWord.indexOf (guess) != -1) {
-    			String result = "";
+    			
     			for (int i = 0; i < secretWord.length(); i++) {
     		
     			char ch = guess.charAt(0);
@@ -81,7 +82,7 @@ public class Hangman extends ConsoleProgram {
     	// fill in letter or display incorrect guess
     	// keep track of guess, more than 8 incorrect guess = lose, guess word before 8 incorrect = win
     	
-    	
+    	return result;
     }
     
    private String printDashes (String secretWord) {

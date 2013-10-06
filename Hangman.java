@@ -18,12 +18,10 @@ public class Hangman extends ConsoleProgram {
 		/* You fill this in */
     	
     	println ("Welcome to Hangman");
-    	while (TURNS > 0) {
+    	
     		guessWord ();
     		//drawHangMan();
-    		
-    	}
-    	//winOrLoseMessage();
+    		//winOrLoseMessage();
     	
 	}
     
@@ -34,7 +32,9 @@ public class Hangman extends ConsoleProgram {
     	println ("The word now looks like this: " + printDashes(secretWord));
     	println ("You have " + TURNS + " guesses left.");
     
-    	guessLetter (secretWord);
+    	while (TURNS > 0) {
+    		guessLetter (secretWord);
+    	}
     	
     	
     	

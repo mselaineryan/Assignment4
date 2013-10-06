@@ -32,57 +32,57 @@ public class Hangman extends ConsoleProgram {
     	println ("The word now looks like this: " + printDashes(secretWord));
     	println ("You have " + TURNS + " guesses left.");
     
-    	while (TURNS > 0) {
+    	
     		guessLetter (secretWord);
-    	}
+    	
     	
     	
     	
     }
     
     private void guessLetter (String secretWord) {
-    	
-    	String guess = readLine ("Your guess: ");
-    	guess = guess.toUpperCase();
-    	String result = "";
-    	for (int i = 0; i < secretWord.length(); i++) {
+    	while (TURNS > 0) {
+    		String guess = readLine ("Your guess: ");
+    		guess = guess.toUpperCase();
+    		String result = "";
+    		for (int i = 0; i < secretWord.length(); i++) {
     		
-    		char ch = guess.charAt(0);
-    		if (ch != secretWord.charAt(i)) {
-    			result += "- ";
+    			char ch = guess.charAt(0);
+    			if (ch != secretWord.charAt(i)) {
+    				result += "- ";
     			
     			
-    		} else result += ch + " ";
-    		
-    	}
-    	
-    	
-    		for (int i = 0; i < result.length(); i++) {
-    			char ch = result.charAt(i);
-    			if (Character.isLetter(ch)) {
-    				println ("That letter is correct.");
-    				break;
-    			} 
-    			
+    			} else result += ch + " ";
     		
     		}
-    		
-    		if (secretWord.indexOf (guess) == -1) {
-    			println ("There are no " + guess + "'s in the word.");
-    			 TURNS -= 1;
+    	
+    	
+    			for (int i = 0; i < result.length(); i++) {
+    				char ch = result.charAt(i);
+    				if (Character.isLetter(ch)) {
+    					println ("That letter is correct.");
+    					break;
+    				} 
     			
+    		
+    			}
+    		
+    			if (secretWord.indexOf (guess) == -1) {
+    				println ("There are no " + guess + "'s in the word.");
+    				TURNS -= 1;
+    			
+    			}
+    	
+    	
+    	
+    		
+    			println ("The word now looks like this:" + result);	
+    			println ("You have " + TURNS + " guesses left");
+    	
+    	
+    	
+    	
     		}
-    		
-    	
-    	
-    		
-    	println ("The word now looks like this:" + result);	
-    	println ("You now have " + TURNS + " guesses left");
-    	
-    	
-    	
-    	
-    	
     	
     	
     	

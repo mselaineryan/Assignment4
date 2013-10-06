@@ -75,8 +75,9 @@ public class Hangman extends ConsoleProgram {
     		
     	
     	
-    	println ("You now have " + TURNS + " guesses left");	
+    		
     	println ("The word now looks like this:" + result);	
+    	println ("You now have " + TURNS + " guesses left");
     	
     	
     	

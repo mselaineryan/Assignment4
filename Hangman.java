@@ -86,7 +86,7 @@ public class Hangman extends ConsoleProgram {
         	
         		}
         	
-    	return result;
+    	
     }
     
    private String printDashes (String secretWord) {

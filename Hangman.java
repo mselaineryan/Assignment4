@@ -40,7 +40,7 @@ public class Hangman extends ConsoleProgram {
     	
     }
     
-    private String guessLetter (String secretWord) {
+    private void guessLetter (String secretWord) {
     	String result = "";
     		while (TURNS > 0) {
         		String guess = readLine ("Your guess: ");

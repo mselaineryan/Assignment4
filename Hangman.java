@@ -34,7 +34,7 @@ public class Hangman extends ConsoleProgram {
     
     	
     	String wordSetUp = firstGuess (secretWord);
-    	nextGuess (wordSetup);
+    	//nextGuess (wordSetUp);
     	
     	
     	

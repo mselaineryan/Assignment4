@@ -33,14 +33,15 @@ public class Hangman extends ConsoleProgram {
     	println ("You have " + TURNS + " guesses left.");
     
     	
-    	guessLetter (secretWord);
+    	String wordSetUp = firstGuess (secretWord);
+    	nextGuess (wordSetup);
     	
     	
     	
     	
     }
     
-    private void guessLetter (String secretWord) {
+    private String firstGuess (String secretWord) {
     	String result = "";
     		while (TURNS > 0) {
         		String guess = readLine ("Your guess: ");
@@ -59,6 +60,7 @@ public class Hangman extends ConsoleProgram {
         		}
         	
         	
+        		
         			for (int i = 0; i < result.length(); i++) {
         				char ch = result.charAt(i);
         				if (Character.isLetter(ch)) {
@@ -81,11 +83,12 @@ public class Hangman extends ConsoleProgram {
         			println ("The word now looks like this:" + result);	
         			println ("You have " + TURNS + " guesses left");
         	
+        			result = "";
         	
         	
         	
         		}
-        	
+        	return result;
     	
     }
     

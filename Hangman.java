@@ -49,6 +49,7 @@ public class Hangman extends ConsoleProgram {
         		for (int i = 0; i < secretWord.length(); i++) {
         		
         			char ch = guess.charAt(0);
+        			
         			if (ch != secretWord.charAt(i)) {
         				result += "- ";
         			

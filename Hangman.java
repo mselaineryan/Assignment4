@@ -53,7 +53,7 @@ public class Hangman extends ConsoleProgram {
         		
         			char ch = guess.charAt(0);
         			
-        			if (ch != secretWord.charAt(i)) {
+        			if (ch == secretWord.charAt(i)) {
         				//find the index position of ch. 
         				//Then go to result and substitute the character at that
         				//index (-) with ch.

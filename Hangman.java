@@ -45,6 +45,7 @@ public class Hangman extends ConsoleProgram {
     
     private String firstGuess (String secretWord) {
     	String result = printDashes (secretWord);
+    	println (result); //trial
     		while (TURNS > 0) {
         		String guess = readLine ("Your guess: ");
         		guess = guess.toUpperCase();
@@ -57,12 +58,11 @@ public class Hangman extends ConsoleProgram {
         			if (ch == secretWord.charAt(i)) {
         				
         				
-        				int pos = secretWord.indexOf(ch);
-        				//find the index position of ch. 
-        				//Then go to result and substitute the character at that
-        				//index (-) with ch.
+        			int pos = secretWord.indexOf(ch);
+        				
         				
         			result = result.replace (result.charAt(pos), ch);
+        			println (result);//trial
         			
         			}
         		

@@ -48,13 +48,14 @@ public class Hangman extends ConsoleProgram {
     		while (TURNS > 0) {
         		String guess = readLine ("Your guess: ");
         		guess = guess.toUpperCase();
-    			char ch = guess.charAt(0);
+    			
 
         	
         		for (int i = 0; i < secretWord.length(); i++) {
         		
-        			
+        			char ch = guess.charAt(0);
         			if (ch == secretWord.charAt(i)) {
+        				
         				
         				int pos = secretWord.indexOf(ch);
         				//find the index position of ch. 

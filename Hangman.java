@@ -103,7 +103,7 @@ public class Hangman extends ConsoleProgram {
 	   String dashes = "";
 	   
 	   for (int i = 0; i < secretWord.length(); i++) {
-		   dashes += "- ";
+		   dashes += "-";
 	   }
 	   return dashes;
    }

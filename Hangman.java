@@ -28,21 +28,23 @@ public class Hangman extends ConsoleProgram {
     private void guessWord () {
     	
     	
-    	String secretWord = selectRandomWord ();
+    	
     	println ("The word now looks like this: " + printDashes(secretWord));
     	println ("You have " + TURNS + " guesses left.");
     
     	
-    	String wordSetUp = firstGuess (secretWord);
-    	//nextGuess (wordSetUp);
+    	firstGuess (secretWord);
     	
     	
     	
     	
     }
     
+   
+    
+    
     private String firstGuess (String secretWord) {
-    	String result = "";
+    	String result = printDashes (secretWord);
     		while (TURNS > 0) {
         		String guess = readLine ("Your guess: ");
         		guess = guess.toUpperCase();
@@ -52,10 +54,12 @@ public class Hangman extends ConsoleProgram {
         			char ch = guess.charAt(0);
         			
         			if (ch != secretWord.charAt(i)) {
-        				result += "- ";
+        				//find the index position of ch. 
+        				//Then go to result and substitute the character at that
+        				//index (-) with ch.
+        			result = result.replace ('-', ch);
         			
-        			
-        			} else result += ch + " ";
+        			}
         		
         		}
         	
@@ -128,7 +132,7 @@ public class Hangman extends ConsoleProgram {
 	   }
 	   return rd;
    }
-    
+    private String secretWord = selectRandomWord ();// does this really need to be an instance var?
     private HangmanLexicon HangmanWords = new HangmanLexicon ();
     private RandomGenerator rgen = RandomGenerator.getInstance ();
     private static int TURNS = 8;

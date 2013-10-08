@@ -43,7 +43,7 @@ public class Hangman extends ConsoleProgram {
    
     
     
-    private String firstGuess (String secretWord) {
+    private void firstGuess (String secretWord) {
     	String result = printDashes (secretWord);
     	println (result); //trial
     		while (TURNS > 0) {
@@ -92,12 +92,12 @@ public class Hangman extends ConsoleProgram {
         			println ("The word now looks like this:" + result);	
         			println ("You have " + TURNS + " guesses left");
         	
-        			result = "";
+        			
         	
         	
         	
         		}
-        	return result;
+        	
     	
     }
     

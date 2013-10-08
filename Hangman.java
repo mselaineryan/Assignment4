@@ -28,7 +28,7 @@ public class Hangman extends ConsoleProgram {
     private void guessWord () {
     	
     	
-    	
+    	String secretWord = selectRandomWord ();
     	println ("The word now looks like this: " + printDashes(secretWord));
     	println ("You have " + TURNS + " guesses left.");
     
@@ -132,7 +132,7 @@ public class Hangman extends ConsoleProgram {
 	   }
 	   return rd;
    }
-    
+   
     private HangmanLexicon HangmanWords = new HangmanLexicon ();
     private RandomGenerator rgen = RandomGenerator.getInstance ();
     private static int TURNS = 8;

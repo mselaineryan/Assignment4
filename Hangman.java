@@ -45,7 +45,6 @@ public class Hangman extends ConsoleProgram {
     
     private void firstGuess (String secretWord) {
     	String result = printDashes (secretWord);
-    	println (result); //trial
     		while (TURNS > 0) {
         		String guess = readLine ("Your guess: ");
         		guess = guess.toUpperCase();
@@ -62,7 +61,6 @@ public class Hangman extends ConsoleProgram {
         				
         				
         			result = result.replace (result.charAt(pos), ch);
-        			println (result);//trial
         			
         			}
         		

@@ -54,14 +54,14 @@ public class Hangman extends ConsoleProgram {
         		for (int i = 0; i < secretWord.length(); i++) {
         		
         			char ch = guess.charAt(0);
-        			println (ch); //
+        			
         			int pos = secretWord.indexOf(ch);
-        			println (pos);
-        			char change = result.charAt(pos);
-        			println (change);
+        		
+        			
         			if (ch == secretWord.charAt(i)) {
         				
-        				result = result.replace (change, ch);
+        				result = result.substring(0,pos) + ch + result.substring((pos+1));
+        				
         				println (result);
         			}
         		

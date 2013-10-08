@@ -132,7 +132,7 @@ public class Hangman extends ConsoleProgram {
 	   }
 	   return rd;
    }
-    private String secretWord = selectRandomWord ();// does this really need to be an instance var?
+    
     private HangmanLexicon HangmanWords = new HangmanLexicon ();
     private RandomGenerator rgen = RandomGenerator.getInstance ();
     private static int TURNS = 8;

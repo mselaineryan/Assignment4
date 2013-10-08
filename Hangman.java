@@ -58,9 +58,10 @@ public class Hangman extends ConsoleProgram {
         				
         				
         			int pos = secretWord.indexOf(ch);
+        			char change = result.charAt(pos);
         				
         				
-        			result = result.replace (result.charAt(pos), ch);
+        			result = result.replace (change, ch);
         			
         			}
         		
